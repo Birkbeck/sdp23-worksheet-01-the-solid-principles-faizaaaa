@@ -37,9 +37,13 @@ public class Board {
 
 
 }
-class displayBoard {
+class DisplayBoard {
 
-    Board b = new Board();
+    Board b;
+
+    DisplayBoard(Board b){
+        this.b = b;
+    }
 
     // Poor code — can you improve this?
     public void display() {
