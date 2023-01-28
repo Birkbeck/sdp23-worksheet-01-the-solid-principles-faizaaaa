@@ -10,31 +10,36 @@ public class Board {
             this.spots.add(String.valueOf(i));
         }
     }
+}
 
+class StoreBoard{
+    Board b;
+    StoreBoard(Board b) {
+        this.b=b;
+    }
     public List<String> firstRow() {
         List<String> firstRow = new ArrayList<>();
-        firstRow.add(this.spots.get(0));
-        firstRow.add(this.spots.get(1));
-        firstRow.add(this.spots.get(2));
+        firstRow.add(b.spots.get(0));
+        firstRow.add(b.spots.get(1));
+        firstRow.add(b.spots.get(2));
         return firstRow;
     }
 
     public List<String> secondRow() {
         List<String> secondRow = new ArrayList<>();
-        secondRow.add(this.spots.get(3));
-        secondRow.add(this.spots.get(4));
-        secondRow.add(this.spots.get(5));
+        secondRow.add(b.spots.get(3));
+        secondRow.add(b.spots.get(4));
+        secondRow.add(b.spots.get(5));
         return secondRow;
     }
 
     public List<String> thirdRow() {
         List<String> thirdRow = new ArrayList<>();
-        thirdRow.add(this.spots.get(6));
-        thirdRow.add(this.spots.get(7));
-        thirdRow.add(this.spots.get(8));
+        thirdRow.add(b.spots.get(6));
+        thirdRow.add(b.spots.get(7));
+        thirdRow.add(b.spots.get(8));
         return thirdRow;
     }
-
 
 }
 class DisplayBoard {
