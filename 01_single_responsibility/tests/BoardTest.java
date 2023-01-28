@@ -18,41 +18,45 @@ public class BoardTest {
     @Test
     public void testBoardReturnsFirstRow() {
         Board board = new Board();
+        StoreBoard b = new StoreBoard(board);
         ArrayList<String> rowOne = new ArrayList<String>();
         rowOne.add("0");
         rowOne.add("1");
         rowOne.add("2");
 
-        assertEquals(rowOne, board.firstRow());
+        assertEquals(rowOne, b.firstRow());
     }
 
     @Test
     public void testBoardReturnsSecondRow() {
         Board board = new Board();
+        StoreBoard b = new StoreBoard(board);
         ArrayList<String> rowTwo = new ArrayList<String>();
         rowTwo.add("3");
         rowTwo.add("4");
         rowTwo.add("5");
 
-        assertEquals(rowTwo, board.secondRow());
+        assertEquals(rowTwo, b.secondRow());
     }
 
     @Test
     public void testBoardReturnsThirdRow() {
         Board board = new Board();
+        StoreBoard b = new StoreBoard(board);
         ArrayList<String> rowThree = new ArrayList<String>();
         rowThree.add("6");
         rowThree.add("7");
         rowThree.add("8");
 
-        assertEquals(rowThree, board.thirdRow());
+        assertEquals(rowThree, b.thirdRow());
     }
 
     @Test
     public void testPrintsBoardToConsole() {
         Board board = new Board();
+        DisplayBoard b = new DisplayBoard(board);
         System.setOut(new PrintStream(outContent));
-       // displayBoard.display();
+        b.display();
         assertEquals("0 | 1 | 2\n3 | 4 | 5\n6 | 7 | 8", outContent.toString());
     }
 }
