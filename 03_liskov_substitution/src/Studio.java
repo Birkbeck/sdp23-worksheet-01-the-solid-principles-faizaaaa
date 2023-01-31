@@ -1,4 +1,6 @@
-public final class Studio extends Apartment {
+public final class Studio {
+    int squareFootage;
+    int numberOfBedrooms;
     public Studio() {
         this.numberOfBedrooms = 0;
     }
@@ -7,3 +9,4 @@ public final class Studio extends Apartment {
         this.squareFootage = sqft;
     }
 }
+

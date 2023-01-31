@@ -3,9 +3,9 @@ public class WeatherTracker {
     Phone phone;
     Emailer emailer;
 
-    public WeatherTracker() {
-        phone = new Phone();
-        emailer = new Emailer();
+    public WeatherTracker(Phone p, Emailer e) {
+        phone = p;
+        emailer = e;
     }
 
     public void setCurrentConditions(String weatherDescription) {
