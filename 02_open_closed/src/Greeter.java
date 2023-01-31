@@ -1,4 +1,8 @@
-public class Greeter {
+interface Greets {
+    public String greet();
+}
+
+public class Greeter implements Greets{
     String formality;
 
     public String greet() {
